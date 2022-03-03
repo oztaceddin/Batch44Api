@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.equalTo;
 public class GetRequest03 {
 
     @Test
-    public void test01(){
+    public void test03(){
 
         String url="https://restful-booker.herokuapp.com/booking/7";
 

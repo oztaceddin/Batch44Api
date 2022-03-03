@@ -13,7 +13,7 @@ public class GetRequest05 {
 
 
     @Test
-    public void test01() {
+    public void test05() {
 
         /*
         https://jsonplaceholder.typicode.com/todos/123 url’ine

@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.given;
 public class GetRequest04 {
 
     @Test
-    public void test01() {
+    public void test04() {
 
         /*
         http://dummy.restapiexample.com/api/v1/employees  url'ine
