@@ -11,7 +11,7 @@ import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequest19 extends DummybaseUrl {
+public class GetRequest19_GROOVY extends DummybaseUrl {
 
 
     /*
