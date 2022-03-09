@@ -15,6 +15,10 @@ public class GetRequest01 {
 
         Response response=given().when().get(url);
 
+        //given().when().get(url);-->REQUEST(istek)
+        //Response response--->RESPONSE(istegime verilen cvp)
+
+
         response.prettyPrint();//responsen içine gelen bilgileri yazdırmak için
 
         System.out.println("status code : "+response.statusCode());
