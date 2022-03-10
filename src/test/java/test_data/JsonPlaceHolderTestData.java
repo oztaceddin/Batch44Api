@@ -1,5 +1,7 @@
 package test_data;
 
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,6 +27,25 @@ public class JsonPlaceHolderTestData {
         return expectedData;
 
 
+    }
+
+        //  Dönen response un Status kodunun 201 ve response body nin aşağıdaki gibi olduğunu test edin
+    //  {
+    //    "userId": 55,
+    //    "title": "Tidy your room",
+    //    "completed": false,
+    //    "id": …
+    //   }
+    //*/
+
+    public JSONObject setUpPostData(){
+        JSONObject expectedRequest = new JSONObject();
+        expectedRequest.put("userId", 55);
+        expectedRequest.put("title", "Tidy your room");
+        expectedRequest.put("completed", false);
+        expectedRequest.put("statusCode", 201);
+        expectedRequest.put("id", 201);
+        return expectedRequest;
     }
 
 }

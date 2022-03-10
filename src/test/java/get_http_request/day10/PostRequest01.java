@@ -2,8 +2,10 @@ package get_http_request.day10;
 
 import base_url.HerOkuAppBaseUrl;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;
+import org.junit.Assert;
 import org.junit.Test;
 import test_data.HerOkuAppTestData;
 
@@ -63,6 +65,47 @@ public class PostRequest01 extends HerOkuAppBaseUrl {
                 .post("/{parametre1}");
 
         response.prettyPrint();
+
+        // JSONObject'te toString() kullanmalıyız => body(expectedRequestData.toString())
+
+
+
+        //4--->dogrulama
+
+        //a----jsonpath
+
+        JsonPath jsonPath=response.jsonPath();
+
+        Assert.assertEquals(200,response.statusCode());
+        response.then().assertThat().statusCode(200);
+
+        // Expected = Java formatındaki oluşturduğumuz data
+        //Actual Data = APİ den Json formatında gelen data  (edited)
+
+
+        Assert.assertEquals(expectedRequestData.getString("firstname"),jsonPath.getString("booking.firstname"));
+        Assert.assertEquals(expectedRequestData.getString("lastname"),jsonPath.getString("booking.lastname"));
+        Assert.assertEquals(expectedRequestData.getInt("totalprice"),jsonPath.getInt("booking.totalprice"));
+        Assert.assertEquals(expectedRequestData.getBoolean("depositpaid"),jsonPath.getBoolean("booking.depositpaid"));
+
+        Assert.assertEquals(expectedRequestData.getJSONObject("bookingdates").getString("checkin"),
+                jsonPath.getString("booking.bookingdates.checkin"));
+
+        Assert.assertEquals(expectedRequestData.getJSONObject("bookingdates").get("checkout"),
+                jsonPath.getString("booking.bookingdates.checkout"));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 

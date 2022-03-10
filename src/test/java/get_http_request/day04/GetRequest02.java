@@ -18,6 +18,9 @@ public class GetRequest02 {
 
         Response response = given().when().get(url);
 
+        //given().when().get(url)---> request
+        //Response response---->response
+
         response.prettyPrint();  //respons daki body getirir
 
         // response.prettyPeek();  //respons daki tüm bilgileri getir

@@ -42,7 +42,7 @@ public class GetRequest09 extends DummybaseUrl {
         //headers
         response.then().assertThat().statusCode(200).contentType(ContentType.JSON);
 
-        //body
+        //body--matchers
         response.
                 then().
                 assertThat()

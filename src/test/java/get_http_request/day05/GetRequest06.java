@@ -28,6 +28,9 @@ public class GetRequest06 {
         Response response = given().when().get(url);
         response.prettyPrint();
 
+        // Response response = given().accept("application/json").when().get(url);
+        //hata durumunda accept yapılarak düzeltile bilir
+
         //headers
         response.
                 then().
