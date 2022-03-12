@@ -48,4 +48,68 @@ public class JsonPlaceHolderTestData {
         return expectedRequest;
     }
 
+    //***********PutRequest01
+
+    //{
+    //"userId": 21,
+    //"title": "Wash the dishes",
+    //"completed": false
+    //}
+
+
+    public JSONObject setUpPutData(){
+
+        JSONObject expectedRequest=new JSONObject();
+        expectedRequest.put("userId",21);
+        expectedRequest.put("title","Wash the dishes");
+        expectedRequest.put("completed", false);
+
+
+     return expectedRequest;
+
+    }
+
+
+
+    //*******PatchRequest01
+    //  {
+    //
+    //     "title": "Batch44"
+    //
+    //    }
+
+    public JSONObject SetUpPatchRequestData(){
+
+        JSONObject requestData=new JSONObject();
+        requestData.put("title","Batch44");
+
+        return requestData;
+    }
+
+    //"userId": 10,
+    //"title": "Batch44"
+    //"completed": true,
+    //"id": 198
+    //}
+
+    public JSONObject setUpPatcEcpectedData(){
+
+        JSONObject expectedData=new JSONObject();
+        expectedData.put("userId",10);
+        expectedData.put("title","Batch44");
+        expectedData.put("completed",true);
+        expectedData.put("id",198);
+
+
+        return expectedData;
+    }
+
+
+
+
+
+
+
+
+
 }

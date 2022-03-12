@@ -80,6 +80,8 @@ public class PostRequest03 extends JsonPlaceHolderBaseUrl {
 
         JsonPath jsonPath = response.jsonPath();
 
+
+
         Assert.assertEquals(expectedRequestData.get("statusCode"), response.statusCode());
 
         Assert.assertEquals(expectedRequestData.get("userId"), jsonPath.getInt("userId"));
