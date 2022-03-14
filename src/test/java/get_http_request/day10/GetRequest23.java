@@ -109,12 +109,25 @@ public class GetRequest23 extends DummybaseUrl {
 
         //      10. Çalışan bilgilerinin bilgilerinin aşağıdaki gibi
 
-    //    Assert.assertEquals(expectedTestDataMap.get("id"),((Map)((List)actualData.get("data")).get(9)).get("id"));
-        Assert.assertEquals(expectedTestDataMap.get("employee_name"),((Map)((List)actualData.get("data")).get(9)).get("employee_name"));
+     /*
+        {"id": 10,
+               "employee_name": "Sonya Frost",
+               "employee_salary": 103600,
+               "employee_age": 23,
+               "profile_image": ""}
+        */
 
+        Assert.assertEquals(((Map) expectedTestDataMap.get("Onuncucalisan")).get("employee_name"),
+                ((Map)((List) actualData.get("data")).get(9)).get("employee_name"));
 
+        Assert.assertEquals(((Map) expectedTestDataMap.get("Onuncucalisan")).get("employee_salary"),
+                ((Map)((List) actualData.get("data")).get(9)).get("employee_salary"));
 
+        Assert.assertEquals(((Map) expectedTestDataMap.get("Onuncucalisan")).get("employee_age"),
+                ((Map)((List) actualData.get("data")).get(9)).get("employee_age"));
 
+        Assert.assertEquals(((Map) expectedTestDataMap.get("Onuncucalisan")).get("profile_image"),
+                ((Map)((List) actualData.get("data")).get(9)).get("profile_image"));
 
 
 

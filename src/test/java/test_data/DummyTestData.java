@@ -8,6 +8,8 @@ import java.util.List;
 
 public class DummyTestData {
 
+    //************GetRequest23
+
      /*
       http://dummy.restapiexample.com/api/v1/employees url ine bir istek gönderildiğinde
       Status kodun 200 olduğunu,
@@ -45,7 +47,8 @@ public class DummyTestData {
 
         onuncuCalisan.put("id", 10);
         onuncuCalisan.put("employee_name", "Sonya Frost");
-        onuncuCalisan.put("employee_salary", 23);
+        onuncuCalisan.put("employee_salary", 103600);
+        onuncuCalisan.put("employee_age", 23);
         onuncuCalisan.put("profile_image", "");
 
 
@@ -60,6 +63,8 @@ public class DummyTestData {
 
         return expectedData;
     }
+
+    //*************PostRequest02
 
     //{
     //    "name":"Ali Can",
@@ -78,6 +83,8 @@ public class DummyTestData {
         return requestBody;
 
     }
+
+
 
     //gönderildiğinde,Status kodun 200 olduğunu ve dönen response body nin,
     //
