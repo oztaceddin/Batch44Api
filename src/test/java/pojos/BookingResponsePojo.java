@@ -1,66 +1,65 @@
 package pojos;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BookingResponsePojo {
+    /*
+      {
+        "bookingid": 11,
+                "booking": {
+                            "firstname": "Ali",
+                            "lastname": "Can",
+                            "totalprice": 500,
+                            "depositpaid": true,
+                            "bookingdates": {
+                                            "checkin": "2022-03-01",
+                                            "checkout": "2022-03-11"
+                                            }
+                          }
+      }
+     */
 
-    //{bookingis:11,
-    //"booking": {
-    //            "firstname": "Ali",
-    //            "lastname": "Can",
-    //            "totalprice": 500,
-    //            "depositpaid": true,
-    //            "bookingdates": {
-    //                            "checkin": "2022-03-01",
-    //                            "checkout": "2022-03-11"
-    //                      }
-    //                  }
-    //              }
+    //1) private değişkenleri oluştur.
+    private int bookingId;
+    private BookingPojo booking;
 
-    // 1---degişkenleri private olarak tanımlayacagız
+    //2) getter ve setter
 
-    private int bookingid;
-    private BookingPojo bookingPojo;
-
-    // 2---degişkenlerin degerlerine ulaşmak için get/ setter oluşturulur
-
-
-    public int getBooking() {
-        return bookingid;
+    public int getBookingId() {
+        return bookingId;
     }
 
-    public void setBooking(int booking) {
-        this.bookingid = booking;
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
     }
 
-    public BookingPojo getBookingPojo() {
-        return bookingPojo;
+    public BookingPojo getBooking() {
+        return booking;
     }
 
-    public void setBookingPojo(BookingPojo bookingPojo) {
-        this.bookingPojo = bookingPojo;
+    public void setBooking(BookingPojo booking) {
+        this.booking = booking;
     }
 
 
-    // 3---parametreli ve parametresiz constructor oluşturalm
-
+    //3) Parametreli ve Parametresiz Constructor
 
     public BookingResponsePojo() {
     }
 
-    public BookingResponsePojo(int booking, BookingPojo bookingPojo) {
-        this.bookingid = booking;
-        this.bookingPojo = bookingPojo;
+    public BookingResponsePojo(int bookingId, BookingPojo booking) {
+        this.bookingId = bookingId;
+        this.booking = booking;
     }
-
-
-
-    //4---toString methodu oluşturalm
+    //4) toString()
 
 
     @Override
     public String toString() {
         return "BookingResponsePojo{" +
-                "booking=" + bookingid +
-                ", bookingPojo=" + bookingPojo +
+                "bookingId=" + bookingId +
+                ", booking=" + booking +
                 '}';
     }
 }

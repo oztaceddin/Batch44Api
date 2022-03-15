@@ -7,7 +7,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import pojos.JsonPlaceHolderPojo;
 
-import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 

@@ -2,25 +2,26 @@ package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DummyPojo {
 
 
-
-    //"status": "success",
-    // "data": {
-
-    // "message": "Successfully! Record has been fetched."
-    // }
-
+    /*
+GET Request to the URL http://dummy.restapiexample.com/api/v1/employee/1
+                       Status code is 200
+{
+"status": "success",
+"data": {
+,
+"message": "Successfully! Record has been fetched."
+}
+*/
+    //1)
     private String status;
-    private DummyDataPojo dummydata;
+    private Data data;
     private String message;
 
-
-    //getter setter
-
+    //2)
 
     public String getStatus() {
         return status;
@@ -30,12 +31,12 @@ public class DummyPojo {
         this.status = status;
     }
 
-    public DummyDataPojo getDummydata() {
-        return dummydata;
+    public Data getData() {
+        return data;
     }
 
-    public void setDummydata(DummyDataPojo dummydata) {
-        this.dummydata = dummydata;
+    public void setData(Data data) {
+        this.data = data;
     }
 
     public String getMessage() {
@@ -46,26 +47,24 @@ public class DummyPojo {
         this.message = message;
     }
 
-    //parametreli ve parametresiz consr
-
+    //3)
 
     public DummyPojo() {
     }
 
-    public DummyPojo(String status, DummyDataPojo dummydata, String message) {
+    public DummyPojo(String status, Data data, String message) {
         this.status = status;
-        this.dummydata = dummydata;
+        this.data = data;
         this.message = message;
     }
 
-    //tostring
-
+    //4) toString()
 
     @Override
     public String toString() {
         return "DummyPojo{" +
                 "status='" + status + '\'' +
-                ", dummydata=" + dummydata +
+                ", data=" + data +
                 ", message='" + message + '\'' +
                 '}';
     }

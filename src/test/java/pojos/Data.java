@@ -2,29 +2,27 @@ package pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class DummyDataPojo {
+public class Data {
+    /*
+     "data": {
+                "id": 1,
+                "employee_name": "Tiger Nixon",
+               "employee_salary": 320800,
+               "employee_age": 61,
+               "profile_image": ""
+            }
+     */
 
-
-
-       //"data": {
-    //   "id": 1,
-    //   "employee_name": "Tiger Nixon",
-    //   "employee_salary": 320800,
-    //   "employee_age": 61,
-    //   "profile_image": ""
-    //   }
+    //1) private değişkenleri olustur.
 
     private int id;
     private String employee_name;
     private int employee_salary;
     private int employee_age;
-    private String profile_image;
+    private  String profile_image;
 
-
-
-    //gettr setter
+    //2) getter and setter
 
     public int getId() {
         return id;
@@ -66,14 +64,12 @@ public class DummyDataPojo {
         this.profile_image = profile_image;
     }
 
+    //3) Parametreli ve Parametresiz Constructor
 
-    // parametreli ve parametresiz consr
-
-
-    public DummyDataPojo() {
+    public Data() {
     }
 
-    public DummyDataPojo(int id, String employee_name, int employee_salary, int employee_age, String profile_image) {
+    public Data(int id, String employee_name, int employee_salary, int employee_age, String profile_image) {
         this.id = id;
         this.employee_name = employee_name;
         this.employee_salary = employee_salary;
@@ -81,10 +77,11 @@ public class DummyDataPojo {
         this.profile_image = profile_image;
     }
 
+    //4) toString()
 
     @Override
     public String toString() {
-        return "DummyDataPojo{" +
+        return "Data{" +
                 "id=" + id +
                 ", employee_name='" + employee_name + '\'' +
                 ", employee_salary=" + employee_salary +
