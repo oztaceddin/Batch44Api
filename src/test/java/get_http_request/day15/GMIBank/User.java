@@ -1,5 +1,6 @@
-package get_http_request.day15;
+package get_http_request.day15.GMIBank;
 
+//@JsonIgnoreProperties(ignoreUnknown = true)---çalışmassa yapıştır
 public class User {
 
     /*
